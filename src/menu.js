@@ -6,6 +6,7 @@ const menu = [
       { label: 'Utenti', icon: 'pi pi-fw pi-user-edit', to: '/users' },
       { label: 'Utenti lazy', icon: 'pi pi-fw pi-user-edit', to: '/users-lazy' },
       { label: 'Utenti crud', icon: 'pi pi-fw pi-user-edit', to: '/users-crud' },
+      { label: 'Comments', icon: 'pi pi-fw pi-user-edit', to: '/commenti' }
     ]
   },
   {

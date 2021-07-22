@@ -33,7 +33,7 @@ import { TextDemo } from './utilities/TextDemo';
 import { TypographyDemo } from './utilities/TypographyDemo';
 import { TimelineDemo } from './utilities/TimelineDemo';
 
-
+import {Commenti} from './corso/UsersCrud/commenti'
 import {Users, UsersLazy, UsersCrud} from 'corso';
 
 const Routes = () => (
@@ -71,6 +71,7 @@ const Routes = () => (
   <Route path="/users" component={Users} />
   <Route path="/users-lazy" component={UsersLazy} />
   <Route path="/users-crud" component={UsersCrud} />
+  <Route path="/commenti" component={Commenti}/>
   </div>
 )
 
