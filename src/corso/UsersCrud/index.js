@@ -15,7 +15,8 @@ const Users = () => {
     id: null,
     name: '',
     email: '',
-    username:''
+    username:'',
+    zipcode:''
   };
  
   const [users, setUsers] = useState([])
@@ -36,7 +37,12 @@ const Users = () => {
     setUsers(data);
     setTotalRecords(totalRecords)
   }
-
+  const ResponsiveTemplate = (header, field) => rowData => (
+    <>
+    <span className="p-column-title">{header}</span>
+    {rowData[field]}
+    </>
+  )
   useEffect(() => {
     updateCommentsList()
   }, [page]);
@@ -63,6 +69,7 @@ const Users = () => {
   }
 
   const saveUser = () => {
+
     let _users = users.filter(val => val.id === user.id);
     setUsers(_users);
     setSubmitted(true);
@@ -95,6 +102,8 @@ const confirmDeleteSelected = () => {
   setDeleteUsersDialog(true);
 }
 const deleteSelectedUsers = () => {
+  //map sugli utenti l+selezionati e prendere la query (ricreare la query) url id che gli passo con & id=5&id=6 la aggiungo alla query con la join
+  selectedUsers.map(`http://localhost:3000/users/`)
   let _users = users.filter(val => !selectedUsers.includes(val)
   ); 
   setUsers(_users);
@@ -159,7 +168,7 @@ const actionBodyTemplate = (rowData) => {
             onPage={setPage}
             dataKey="id"
             paginator
-            lazy
+            
             totalRecords={totalRecords}
             rows={page.rows}
             rowsPerPageOptions={[2, 5, 10, 25]}
@@ -169,10 +178,10 @@ const actionBodyTemplate = (rowData) => {
             emptyMessage="Non ci sono utenti."
           >
             <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
-            <Column field="name" header="Name" sortable ></Column>
-            <Column field="email" header="Email" sortable ></Column>
-            <Column field="username" header="username" sortable ></Column>
-            <Column field="address.zipcode" header="zipcode" sortable ></Column>
+            <Column field="name" header="Name" sortable body={ResponsiveTemplate('Name', 'name')} ></Column>
+            <Column field="email" header="Email" sortable body={ResponsiveTemplate('Email', 'email')}></Column>
+            <Column field="username" header="Username" sortable body={ResponsiveTemplate('Username', 'username')} ></Column>
+            <Column field="address.zipcode" header="ZipCode" sortable body={ResponsiveTemplate('ZipCode', 'address.zipcode')} ></Column>
             <Column body={actionBodyTemplate}></Column>
           </DataTable>
 
@@ -198,6 +207,7 @@ const actionBodyTemplate = (rowData) => {
               <label htmlFor="username">Username</label>
               <InputText id="username" value={user.username} onChange={(e) => onInputChange(e, 'username')} required rows={3} cols={10} />
             </div>
+            
           </Dialog>
         </div>
         <Dialog visible={deleteUserDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteUserDialogFooter} onHide={hideDeleteUserDialog}>

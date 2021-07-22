@@ -26,7 +26,7 @@ import PrimeReact from 'primereact/api';
 // import 'primereact/resources/themes/mdc-dark-indigo/theme.css'
 // import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css'
 // import 'primereact/resources/themes/fluent-light/theme.css'
-import 'primereact/resources/themes/saga-blue/theme.css'
+//import 'primereact/resources/themes/saga-blue/theme.css'
 // import 'primereact/resources/themes/saga-green/theme.css'
 // import 'primereact/resources/themes/saga-orange/theme.css'
 // import 'primereact/resources/themes/saga-purple/theme.css'
@@ -41,7 +41,7 @@ import 'primereact/resources/themes/saga-blue/theme.css'
 // import 'primereact/resources/themes/nova/theme.css'
 // import 'primereact/resources/themes/nova-alt/theme.css'
 // import 'primereact/resources/themes/nova-accent/theme.css'
-// import 'primereact/resources/themes/luna-amber/theme.css'
+ import 'primereact/resources/themes/luna-amber/theme.css'
 // import 'primereact/resources/themes/luna-blue/theme.css'
 // import 'primereact/resources/themes/luna-green/theme.css'
 // import 'primereact/resources/themes/luna-pink/theme.css'
@@ -50,7 +50,7 @@ import 'primereact/resources/themes/saga-blue/theme.css'
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
-import 'prismjs/themes/prism-coy.css';
+import 'prismjs/themes/prism-funky.css';
 import '@fullcalendar/core/main.css';
 import '@fullcalendar/daygrid/main.css';
 import '@fullcalendar/timegrid/main.css';
