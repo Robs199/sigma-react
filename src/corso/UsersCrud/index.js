@@ -149,7 +149,7 @@ const deleteUsersDialogFooter = (
 const actionBodyTemplate = (rowData) => {
   return (
       <div className="actions">
-         <Button icon="pi pi-pencil" className="p-button-rounded p-button-success p-mr-2" onClick={() => editUser(rowData)} />
+         <Button icon="pi pi-pencil" className="p-button-rounded p-button-warning p-mr-2" onClick={() => editUser(rowData)} />
           <Button icon="pi pi-trash" className="p-button-rounded p-button-danger" onClick={() => confirmDeleteUser(rowData)} />
       </div>
   );
@@ -164,7 +164,7 @@ const actionBodyTemplate = (rowData) => {
             value={users}
             selection={selectedUsers}
             onSelectionChange={(e) => setSelectedUsers(e.value)}
-            first={0}
+            first={page.first}
             onPage={setPage}
             dataKey="id"
             paginator

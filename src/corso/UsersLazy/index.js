@@ -50,7 +50,7 @@ const Users = () => {
             value={users}
             selection={selectedUsers}
             onSelectionChange={(e) => setSelectedUsers(e.value)}
-            first={0}
+            first={page.first}
             onPage={setPage}
             dataKey="id"
             paginator

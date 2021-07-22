@@ -96,7 +96,7 @@ const [totalRecords, setTotalRecords] = useState(0)
             value={comments}
             selection={selectedComments}
             onSelectionChange={(e) => setSelectedComments(e.value)}
-            first={0}
+            first={page.first}
             onPage={setPage}
             dataKey="id"
             paginator
