@@ -32,9 +32,9 @@ export class UserService {
     }))
   }
 
-  updateUser(data){
-    const url = `http://localhost:3000/users/${data.id}`
-    return axios.post(url, data).then(res => ({
+  updateUser(user){
+    const url = `http://localhost:3000/users/${user.id}`
+    return axios.put(url, user).then(res => ({
       data: res.data
     }))
   }

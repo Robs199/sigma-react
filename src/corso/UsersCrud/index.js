@@ -69,15 +69,16 @@ const Users = () => {
   }
 
   const saveUser = () => {
-
-    let _users = users.filter(val => val.id === user.id);
-    setUsers(_users);
+if(user.id){
+  updateUser(user);
+}else{
+  createUser(user)
+}
+   // let _users = users.filter(val => val.id === user.id);
     setSubmitted(true);
-    createUser(user)
-    updateCommentsList()
     setUserDialog(false);
-    setUser(emptyUser);
-   
+    setUsers(emptyUser);
+    updateCommentsList() 
   }
   const deleteUser = () => {
     let _users = users.filter(val => val.id !== user.id);
@@ -118,7 +119,6 @@ const deleteSelectedUsers = () => {
 const editUser = (user) => {
   setUser({ ...user });
   setUserDialog(true);
-  updateUser(user);
 }
   const userDialogFooter = (
     <>
