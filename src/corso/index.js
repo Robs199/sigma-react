@@ -1,3 +1,5 @@
 export { default as Users } from './Users'
 export { default as UsersLazy } from './UsersLazy'
 export { default as UsersCrud } from './UsersCrud'
+export {Commenti as Commenti}  from './commenti/index'
+export {AggiungiCommento as AddCommento} from './commenti/AddComment'

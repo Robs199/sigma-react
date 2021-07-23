@@ -31,7 +31,7 @@ const Users = () => {
   const [deleteUserDialog, setDeleteUserDialog] = useState(false);
   const [deleteUsersDialog, setDeleteUsersDialog] = useState(false);
   const toast = useRef(null);
-  const dt = useRef(null);
+
   const updateCommentsList = async() => {
     const { data, totalRecords } = await getUsers(page.page, page.rows)
     setUsers(data);
@@ -168,7 +168,7 @@ const actionBodyTemplate = (rowData) => {
             onPage={setPage}
             dataKey="id"
             paginator
-            
+            lazy
             totalRecords={totalRecords}
             rows={page.rows}
             rowsPerPageOptions={[2, 5, 10, 25]}
