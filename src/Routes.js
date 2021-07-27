@@ -34,45 +34,47 @@ import { TypographyDemo } from './utilities/TypographyDemo';
 import { TimelineDemo } from './utilities/TimelineDemo';
 
 
-import {Users, UsersLazy, UsersCrud, Commenti, AddCommento} from 'corso';
+import { Users, UsersLazy, UsersCrud, Commenti, AddCommento, Post, User } from 'corso';
 
 const Routes = () => (
   <div className="layout-main">
-  <Route path="/" exact component={Dashboard} />
-  <Route path="/formlayout" component={FormLayoutDemo} />
-  <Route path="/input" component={InputDemo} />
-  <Route path="/floatlabel" component={FloatLabelDemo} />
-  <Route path="/invalidstate" component={InvalidStateDemo} />
-  <Route path="/button" component={ButtonDemo} />
-  <Route path="/table" component={TableDemo} />
-  <Route path="/list" component={ListDemo} />
-  <Route path="/tree" component={TreeDemo} />
-  <Route path="/panel" component={PanelDemo} />
-  <Route path="/overlay" component={OverlayDemo} />
-  <Route path="/menu" component={MenuDemo} />
-  <Route path="/messages" component={MessagesDemo} />
-  <Route path="/file" component={FileDemo} />
-  <Route path="/chart" component={ChartDemo} />
-  <Route path="/misc" component={MiscDemo} />
-  <Route path="/display" component={DisplayDemo} />
-  <Route path="/elevation" component={ElevationDemo} />
-  <Route path="/flexbox" component={FlexBoxDemo} />
-  <Route path="/icons" component={IconsDemo} />
-  <Route path="/grid" component={GridDemo} />
-  <Route path="/spacing" component={SpacingDemo} />
-  <Route path="/typography" component={TypographyDemo} />
-  <Route path="/text" component={TextDemo} />
-  <Route path="/calendar" component={Calendar} />
-  <Route path="/timeline" component={TimelineDemo} />
-  <Route path="/crud" component={Crud} />
-  <Route path="/empty" component={EmptyPage} />
-  <Route path="/documentation" component={Documentation} />
+    <Route path="/" exact component={Dashboard} />
+    <Route path="/formlayout" component={FormLayoutDemo} />
+    <Route path="/input" component={InputDemo} />
+    <Route path="/floatlabel" component={FloatLabelDemo} />
+    <Route path="/invalidstate" component={InvalidStateDemo} />
+    <Route path="/button" component={ButtonDemo} />
+    <Route path="/table" component={TableDemo} />
+    <Route path="/list" component={ListDemo} />
+    <Route path="/tree" component={TreeDemo} />
+    <Route path="/panel" component={PanelDemo} />
+    <Route path="/overlay" component={OverlayDemo} />
+    <Route path="/menu" component={MenuDemo} />
+    <Route path="/messages" component={MessagesDemo} />
+    <Route path="/file" component={FileDemo} />
+    <Route path="/chart" component={ChartDemo} />
+    <Route path="/misc" component={MiscDemo} />
+    <Route path="/display" component={DisplayDemo} />
+    <Route path="/elevation" component={ElevationDemo} />
+    <Route path="/flexbox" component={FlexBoxDemo} />
+    <Route path="/icons" component={IconsDemo} />
+    <Route path="/grid" component={GridDemo} />
+    <Route path="/spacing" component={SpacingDemo} />
+    <Route path="/typography" component={TypographyDemo} />
+    <Route path="/text" component={TextDemo} />
+    <Route path="/calendar" component={Calendar} />
+    <Route path="/timeline" component={TimelineDemo} />
+    <Route path="/crud" component={Crud} />
+    <Route path="/empty" component={EmptyPage} />
+    <Route path="/documentation" component={Documentation} />
 
-  <Route path="/users" component={Users} />
-  <Route path="/users-lazy" component={UsersLazy} />
-  <Route path="/users-crud" component={UsersCrud} />
-  <Route path="/commenti" component={Commenti}/>
-  <Route path="/create-comment" component={AddCommento}/>
+    <Route path="/users" component={Users} />
+    <Route path="/users-lazy" component={UsersLazy} />
+    <Route path="/users-crud" component={UsersCrud} />
+    <Route exact path="/commenti" component={Commenti} />
+    <Route exact path="/commenti/create-comment" component={AddCommento} />
+    <Route exact path='/posts' component={Post} />
+    <Route exact path='/user' component={User} />
   </div>
 )
 

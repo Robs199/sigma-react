@@ -48,5 +48,14 @@ export class UserService {
     }))
   }
 
+
+  getPost(id){
+    const url =`http://localhost:3000/users/${id}/posts`
+    return axios.get(url).then(res => ({
+        data: res.data,
+        totalRecords: res.headers['x-total-count']
+      }))
+}
+
 }
 

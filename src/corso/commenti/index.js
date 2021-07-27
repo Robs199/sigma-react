@@ -25,7 +25,7 @@ useEffect(() =>{
 const leftToolbarTemplate=()=>{
     return(
         <React.Fragment>
-           <Link to='/create-comment'> <Button label="New" icon="pi pi-plus" className="p-button-success p-mr-2"></Button></Link>
+           <Link to='/commenti/create-comment'> <Button label="New" icon="pi pi-plus" className="p-button-success p-mr-2"></Button></Link>
         </React.Fragment>
     )
 }
